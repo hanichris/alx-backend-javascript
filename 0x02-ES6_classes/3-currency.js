@@ -13,7 +13,7 @@ export default class Currency {
       throw new TypeError('Code must be a string');
     }
 
-    this._code = code;
+    this._code = value;
   }
 
   get name() {
