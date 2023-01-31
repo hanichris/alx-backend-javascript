@@ -9,5 +9,6 @@ export default function cleanSet(testSet, startString) {
       res.push(element.substring(startString.length));
     }
   }
+  
   return res.join('-');
 }
