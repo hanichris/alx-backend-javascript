@@ -3,7 +3,7 @@ export default function cleanSet(testSet, startString) {
     return;
   }
 
-  res = [];
+  const res = [];
   for (const element of testSet) {
     if(element.match(startString)){
       res.push(element.substring(startString.length));
