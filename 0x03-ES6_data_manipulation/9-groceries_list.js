@@ -9,3 +9,5 @@ const groceriesList = () => {
 
   return myMap;
 };
+
+export default groceriesList;
