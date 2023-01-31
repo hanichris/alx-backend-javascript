@@ -1,5 +1,5 @@
 export default function cleanSet(testSet, startString) {
-  if (!startString) {
+  if (startString === '' || typeof startString !== 'string') {
     return '';
   }
 
