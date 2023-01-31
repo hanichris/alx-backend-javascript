@@ -1,6 +1,6 @@
 export default function cleanSet(testSet, startString) {
   if (!startString) {
-    return;
+    return '';
   }
 
   const res = [];
