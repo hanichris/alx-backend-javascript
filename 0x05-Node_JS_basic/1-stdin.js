@@ -6,8 +6,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('Welcome to Holberton School, what is your name?\n', (answer) => {
-  console.log(`type of stdin: ${typeof answer}`)
-  console.log(`Your name is: ${answer}`);
+  console.log(`Your name is: ${answer.toString()}`);
   if (process.stdin.isTTY) {
     process.exit();
   }
