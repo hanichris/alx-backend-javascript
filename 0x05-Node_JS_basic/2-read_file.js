@@ -19,8 +19,9 @@ function countStudents(path) {
       const field = row[row.length - 1];
       if (field in Object.keys(studentsByField) === false) {
         studentsByField[field] = [];
+      } else {
+        studentsByField[field].push(firstName);
       }
-      studentsByField[field].push(firstName);
     }
   });
 
