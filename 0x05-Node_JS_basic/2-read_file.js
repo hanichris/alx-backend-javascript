@@ -1,15 +1,18 @@
 const fs = require('fs');
+const readline = require('readline');
 
 function countStudents(path) {
-    let studentCount = 0;
+  if (!fs.existsSync(path) || !fs.statSync(path).isFile()) {
+    throw new Error('Cannot load the database');
+  }
+  
+  const stream = fs.createReadStream(path);
+  const rl = readline.createInterface({input: stream});
 
-    try {
-        const content = fs.readFileSync(path, encoding='utf-8');
-        console.log(content);
-        
-    } catch (error) {
-        throw new Error('Cannot load the database');
-    }
+  rl.on('line', (line) => {
+    console.log(`Received: ${line}`);
+  });
+
 }
 
 module.exports = countStudents;
