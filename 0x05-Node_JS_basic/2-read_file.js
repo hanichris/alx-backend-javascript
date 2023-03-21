@@ -12,7 +12,7 @@ function countStudents(path) {
   let count = 0;
 
   rl.on('line', (line) => {
-    if (line !== "firstname,lastname,age,field" || line !== '') {
+    if (line !== "firstname,lastname,age,field" && line !== '') {
       count += 1;
       const row = line.split(',');
       const firstName = row[0];
