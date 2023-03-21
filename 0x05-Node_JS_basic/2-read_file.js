@@ -17,11 +17,10 @@ function countStudents(path) {
       const row = line.split(',');
       const firstName = row[0];
       const field = row[row.length - 1];
-      if (field in Object.keys(studentsByField) === false) {
+      if (!studentsByField[field]) {
         studentsByField[field] = [];
-      } else {
-        studentsByField[field].push(firstName);
       }
+      studentsByField[field].push(firstName);
     }
   });
 
