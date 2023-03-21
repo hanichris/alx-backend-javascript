@@ -11,9 +11,7 @@ function countStudents(path) {
   const studentsByField = {};
 
   rl.on('line', (line) => {
-    if (line === "firstname,lastname,age,field") {
-
-    } else {
+    if (line !== "firstname,lastname,age,field") {
       const row = line.split(',');
       const firstName = row[0];
       const field = row[row.length - 1];
@@ -25,7 +23,10 @@ function countStudents(path) {
   });
 
   rl.on('close', () => {
-    console.log(studentsByField);
+    for (const [key, value] of Object.entries(studentsByField)) {
+      string_value = value.join(', ');
+      console.log(`Number of students in ${key}: ${value.length}. List: ${string_value}`);
+    }
   })
 
 }
