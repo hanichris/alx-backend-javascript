@@ -1,3 +1,3 @@
-exports.displayMessage = function(msg) {
+export default function displayMessage(msg) {
     console.log(msg);
 }
