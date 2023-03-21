@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 rl.question('Welcome to Holberton School, what is your name?\n', (answer) => {
-  process.stdout.write(`Your name is: ${answer}`);
+  process.stdout.write(`Your name is: ${answer.toString()}`);
   if (process.stdin.isTTY) {
     process.exit();
   }
