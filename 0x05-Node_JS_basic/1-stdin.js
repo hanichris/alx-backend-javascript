@@ -8,7 +8,9 @@ const rl = readline.createInterface({
 rl.question('Welcome to Holberton School, what is your name?\n',
 (answer) => {
     console.log(`Your name is: ${answer}`);
-    process.exit();
+    if (process.stdin.isTTY) {
+        process.exit();
+    }
 });
 
 rl.on('close', () => {
