@@ -8,10 +8,25 @@ function countStudents(path) {
   
   const stream = fs.createReadStream(path);
   const rl = readline.createInterface({input: stream});
+  const studentsByField = {};
 
   rl.on('line', (line) => {
-    console.log(`Received: ${line}`);
+    if (line === "firstname,lastname,age,field") {
+      const headers = line;
+    } else {
+      const row = line.split(',');
+      const firstName = row[0];
+      const field = row[row.length - 1];
+      if (field in Object.keys(studentsByField) === false) {
+        studentsByField[field] = [];
+      }
+      studentsByField[field].push(firstName);
+    }
   });
+
+  rl.on('close', () => {
+    console.log(studentsByField);
+  })
 
 }
 
