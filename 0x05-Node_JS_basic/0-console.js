@@ -1,3 +1,3 @@
-function displayMessage(msg) {
+exports.displayMessage = function(msg) {
     console.log(msg);
 }
