@@ -7,11 +7,11 @@ const rl = readline.createInterface({
 
 rl.question('Welcome to Holberton School, what is your name?\n', (answer) => {
   console.log(`Your name is: ${answer}`);
-  rl.close();
+  if (process.stdin.isTTY) {
+    process.exit();
+  }
 });
 
 rl.on('close', () => {
-  if (!process.stdin.isTTY) {
-    console.log('This important software is now closing');
-  }
+  console.log('This important software is now closing');
 });
