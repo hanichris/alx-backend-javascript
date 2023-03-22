@@ -1,6 +1,6 @@
 process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-process.stdin.on('data', () => {
+process.stdin.on('readable', () => {
   const chunk = process.stdin.read();
 
   if (chunk) {
