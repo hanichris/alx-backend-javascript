@@ -8,8 +8,8 @@ function countStudents(path) {
       } else {
         const studentsByField = {};
         let studentCount = 0;
-        data = data.trim().split('\n');
-        for (const line of data.slice(1)) {
+        const preProcessedData = data.trim().split('\n');
+        for (const line of preProcessedData.slice(1)) {
           studentCount += 1;
           const row = line.split(',');
           const [firstName, field] = [row[0], row[row.length - 1]];
@@ -25,7 +25,7 @@ function countStudents(path) {
         }
         resolve();
       }
-    })
+    });
   });
 }
 
