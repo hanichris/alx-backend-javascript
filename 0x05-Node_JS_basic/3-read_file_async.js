@@ -5,7 +5,7 @@ function countStudents(path) {
     if (err) {
       throw new Error('Cannot load the database');
     }
-    console.log('line reading....')
+    console.log(`data type: ${typeof data}`);
     console.log(data);
   })
 }
