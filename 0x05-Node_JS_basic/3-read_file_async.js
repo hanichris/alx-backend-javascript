@@ -5,8 +5,11 @@ function countStudents(path) {
     if (err) {
       throw new Error('Cannot load the database');
     }
-    console.log(`data type: ${typeof data}`);
-    console.log(data);
+    const studentsByField = {};
+    let studentCount = 0;
+    console.log(`data before pre-processing: ${data}`);
+    data = data.trim().split('/n');
+    console.log(`data after pre-processing: ${data}`);
   })
 }
 
