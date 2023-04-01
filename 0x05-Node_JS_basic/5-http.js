@@ -1,4 +1,5 @@
 const http = require('http');
+const fs = require('fs');
 
 function countStudents(path) {
   return new Promise((resolve, reject) => {
@@ -7,7 +8,7 @@ function countStudents(path) {
         reject(new Error('Cannot load the database'));
       } else {
         const studentsByField = {};
-        let data = '';
+        let resData = '';
         let studentCount = 0;
         const preProcessedData = data.trim().split('\n');
         for (const line of preProcessedData.slice(1)) {
@@ -19,12 +20,12 @@ function countStudents(path) {
           }
           studentsByField[field].push(firstName);
         }
-        data += `Number of students: ${studentCount}\n`;
+        resData += `Number of students: ${studentCount}\n`;
         for (const [key, value] of Object.entries(studentsByField)) {
           const sValue = value.join(', ');
-          data += `Number of students in ${key}: ${value.length}. List: ${sValue}\n`;
+          resData += `Number of students in ${key}: ${value.length}. List: ${sValue}\n`;
         }
-        resolve(data);
+        resolve(resData);
       }
     });
   });
