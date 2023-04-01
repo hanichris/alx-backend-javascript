@@ -45,7 +45,7 @@ app.get('/students', (req, res) => {
   }).catch(() => {
     res.status(404).send('This is the list of our students\nCannot load the database');
   });
-})
+});
 
 app.listen(port);
 module.exports = app;
