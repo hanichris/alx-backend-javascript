@@ -25,7 +25,7 @@ function countStudents(path) {
           const sValue = value.join(', ');
           resData += `Number of students in ${key}: ${value.length}. List: ${sValue}\n`;
         }
-        resolve(resData);
+        resolve(resData.trimEnd());
       }
     });
   });
