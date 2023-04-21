@@ -1,6 +1,6 @@
-import { assert } from "assert";
-import { describe, it } from "mocha";
-import calculateNumber from "./0-calcul";
+import { assert } from 'assert';
+import { describe, it } from 'mocha';
+import calculateNumber from './0-calcul';
 
 describe('calculateNumber', function () {
   it('correct sum when given whole integers', function () {
