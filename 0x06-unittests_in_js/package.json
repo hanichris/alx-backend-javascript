@@ -4,7 +4,7 @@
   "description": "Performing unittests of javascript functions",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test *.test.js"
+    "test": "mocha"
   },
   "author": "Chris Hani",
   "license": "ISC",
