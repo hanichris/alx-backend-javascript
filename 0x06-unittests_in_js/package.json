@@ -1,0 +1,16 @@
+{
+  "name": "unittests",
+  "version": "1.0.0",
+  "description": "Performing unittests of javascript functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test *.test.js"
+  },
+  "author": "Chris Hani",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.4"
+  }
+}
