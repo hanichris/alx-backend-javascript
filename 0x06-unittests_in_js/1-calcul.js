@@ -11,6 +11,8 @@ function calculateNumber(type, a, b) {
     case 'DIVIDE':
       result = _b === 0 ? 'Error' : _a / _b;
       break;
+    default:
+      break;
   }
   return result;
 }
