@@ -1,15 +1,15 @@
 function calculateNumber(type, a, b,) {
-  const [a, b] = [Math.round(a), Math.round(b)];
+  const [_a, _b] = [Math.round(a), Math.round(b)];
   let result;
   switch (type) {
     case 'SUM':
-      result = a + b;
+      result = _a + _b;
       break;
     case 'SUBTRACT':
-      result = a - b;
+      result = _a - _b;
       break;
     case 'DIVIDE':
-      result = b === 0 ? 'Error': a / b;
+      result = _b === 0 ? 'Error': _a / _b;
     default:
       break;
   }
