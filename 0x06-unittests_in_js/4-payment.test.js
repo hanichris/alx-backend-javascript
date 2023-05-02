@@ -8,7 +8,7 @@ describe('sendPaymentRequestToApi', function () {
   let stubCalculateNumber,
       spyConsoleLog;
   beforeEach(function () {
-    stubCalculateNumber = sinon.stub(Utils, 'calculateNumber').callsFake(() => 42);
+    stubCalculateNumber = sinon.stub(Utils, 'calculateNumber').callsFake(() => 10);
     spyConsoleLog = sinon.spy(console, 'log');
   });
 
