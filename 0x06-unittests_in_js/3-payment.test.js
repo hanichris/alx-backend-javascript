@@ -1,4 +1,3 @@
-const { expect } = require('chai');
 const { describe, it } = require('mocha');
 const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./3-payment');
@@ -20,9 +19,7 @@ describe('sendPaymentRequestToApi', function () {
   });
 
   it('should inspect the math of the Utils function', function () {
-    const result = sendPaymentRequestToApi(100, 20);
-    console.log(spyCalculateNumber.callCount);
-    console.log(`Result: ${result}`);
-    // expect(result).to.equal(spyCalculateNumber.returned(120));
+    sendPaymentRequestToApi(100, 20);
+    spyCalculateNumber.returned(120);
   });
 });
