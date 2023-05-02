@@ -5,7 +5,7 @@ const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
 describe('sendPaymentRequestToApi', function () {
-  var spyCalculateNumber;
+  let spyCalculateNumber;
   beforeEach(function () {
     spyCalculateNumber = sinon.spy(Utils, 'calculateNumber');
   });
