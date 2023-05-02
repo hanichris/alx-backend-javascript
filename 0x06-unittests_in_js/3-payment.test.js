@@ -1,3 +1,4 @@
+const { assert } = require('chai');
 const { describe, it } = require('mocha');
 const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./3-payment');
@@ -15,11 +16,11 @@ describe('sendPaymentRequestToApi', function () {
 
   it('should inspect call of the Utils function', function () {
     sendPaymentRequestToApi(100, 20);
-    spyCalculateNumber.calledOnceWith(100, 20);
+    assert.isTrue(spyCalculateNumber.calledOnceWith(100, 20));
   });
 
   it('should inspect the math of the Utils function', function () {
     sendPaymentRequestToApi(100, 20);
-    spyCalculateNumber.returned(120);
+    assert.isTrue(spyCalculateNumber.returned(120));
   });
 });
