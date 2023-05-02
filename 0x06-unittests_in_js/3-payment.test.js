@@ -23,5 +23,4 @@ describe('sendPaymentRequestToApi', function () {
     const result = sendPaymentRequestToApi(100, 20);
     expect(result).to.equal(spyCalculateNumber.returned(120));
   });
-
 });

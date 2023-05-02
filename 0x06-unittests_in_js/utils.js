@@ -1,16 +1,16 @@
 class Utils {
   calculateNumber(type, a, b) {
-    const [_a, _b] = [Math.round(a), Math.round(b)];
+    [this._a, this._b] = [Math.round(a), Math.round(b)];
     let result;
     switch (type) {
       case 'SUM':
-        result = _a + _b;
+        result = this._a + this._b;
         break;
       case 'SUBTRACT':
-        result = _a - _b;
+        result = this._a - this._b;
         break;
       case 'DIVIDE':
-        result = _b === 0 ? 'Error' : _a / _b;
+        result = this._b === 0 ? 'Error' : this._a / this._b;
         break;
       default:
         break;
@@ -19,4 +19,4 @@ class Utils {
   }
 }
 
-modules.exports = Utils;
+module.exports = Utils;
