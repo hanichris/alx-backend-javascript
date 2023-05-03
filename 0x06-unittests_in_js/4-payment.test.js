@@ -5,7 +5,7 @@ const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
 
 describe('sendPaymentRequestToApi', function () {
-  let stubCalculateNumber
+  let stubCalculateNumber;
   let spyConsoleLog;
   beforeEach(function () {
     stubCalculateNumber = sinon.stub(Utils, 'calculateNumber').callsFake(() => 10);
