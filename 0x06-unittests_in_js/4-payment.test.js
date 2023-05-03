@@ -24,6 +24,6 @@ describe('sendPaymentRequestToApi', function () {
 
   it('should inspect the logging functionality', function () {
     sendPaymentRequestToApi(100, 20);
-    assert.isTrue(spyConsoleLog.returned('The total is: 10'));
+    assert.isTrue(spyConsoleLog.calledOnceWith('The total is: 10'));
   });
 });
