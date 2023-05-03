@@ -2,7 +2,6 @@ const { assert } = require('chai');
 const { describe, it } = require('mocha');
 const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./5-payment');
-const Utils = require('./utils');
 
 describe('sendPaymentRequestToApi', function () {
   let spyConsoleLog;
